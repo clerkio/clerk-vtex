@@ -9,7 +9,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Added
 - Allow single binding configuration in the app settings.
 
+### Fixed
+
+- Fixed issue with Product Feed containing products with pricer `0`.
+
 ## [1.1.0] - 2021-11-05
+
 ### Added
+
 - Start new `product` and `category` feeds after sending the current ones.
 - Query Param `skipFeed` that can be applied to feed routes to avoid starting new `product` and `category` feed.
