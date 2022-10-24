@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [1.1.2] - 2022-10-24
+
 ### Fixed
 
 - Allow product feed to be created when account has up to 55k products. Not tested on accounts with more products than that.
