@@ -7,8 +7,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Fixed
+
+- Allow product feed to be created when account has up to 55k products. Not tested on accounts with more products than that.
+
 ## [1.1.1] - 2022-10-20
+
 ### Added
+
 - Allow single binding configuration in the app settings.
 
 ### Fixed

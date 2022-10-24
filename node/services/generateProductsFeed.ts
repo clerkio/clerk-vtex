@@ -91,6 +91,9 @@ export async function generateProductsFeed(ctx: Context) {
     const [from, to] = iterationLimits(i)
 
     productAndSkuIdsPromises.push(catalog.getProductAndSkuIds(from, to))
+
+    // eslint-disable-next-line no-await-in-loop
+    await pacer(1500)
   }
 
   let productAndSkuIds

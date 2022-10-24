@@ -56,7 +56,28 @@ Go to VTEX Site Editor, and on the right side menu a ClerkIO block will be displ
 6. Fill in the information required on the block.
 `Block Class Name`: any name different from clerk.
 `Template Name`: insert the ID provided by Clerk on the previously created Content.
-`Recommendation Logic`: match the recommendation logic to the one specified on the previously created Content. 
+`Product Logic`: match the recommendation logic to the one specified on the previously created Content on Clerk. User can get the details and usage for different product logics on Clerk.io. The available product logics are:
+
+|Product Logic|Details|
+|-----|-----|
+|Best Sellers|
+|Hot Products|
+|Newest Products|
+|Best Sellers In Category|Send a category id as `data-category` to Clerk block. When block is placed in a category page, the category id can be obtained from the page context. User can also manually add a category id via site editor.
+|Hot Products In Category|Send a category id as `data-category` to Clerk block. When placed in a category page, the category id can be obtained from the page context. User can also manually add a category id via site editor.
+|Newest Products in Category|Send a category id as `data-category` to Clerk block. When placed in a category page, the category id can be obtained from the page context. User can also manually add a category id via site editor.
+|Best Alternative Products| When added into a product page, sends the product id as `data-products` to Clerk block. Product id is obtained from context.
+|Best Cross-Sell Produts| When added into a product page, sends the product id as `data-products` to Clerk block. Product id is obtained from context.
+|Recommendations Based On Keywords|User can add a list of keywords via site editor that will be sent to Clerk as `data-keywords`
+|Visitor Recommendations|
+|Visitor Alternatives|
+|Visitor Click History|
+|Recommendations Based On Orders| If there is a user logged in the store, the block will send the user email to Clerk as `data-email`
+|Similar To Order History | If there is a user logged in the store, the block will send the user email to Clerk as `data-email`
+|Customer Order History | If there is a user logged in the store, the block will send the user email to Clerk as `data-email`
+|What Customers Look At Right Now|
+|Recently Purchased Products
+
 
 ## Configuration ClerkIO
 1. create a new store on ClerkIO dashboard. For multi-binding sites, each binding should be a store on Clerk. 
