@@ -46,3 +46,23 @@ export const getProductIdFromContext = ({
 }) => {
   return type === 'product' ? id : ''
 }
+
+type ContentParamArgs = Record<string, string | string[] | undefined>
+
+export const createContentParamArgs = (
+  dataProps: Record<string, string | string[] | undefined>
+) => {
+  if (!Object.keys(dataProps).length) {
+    return null
+  }
+
+  const contentParamArgs: ContentParamArgs = {}
+
+  for (const [key, value] of Object.entries(dataProps)) {
+    const argKey = key.replace('data-', '')
+
+    contentParamArgs[argKey] = value
+  }
+
+  return contentParamArgs
+}
