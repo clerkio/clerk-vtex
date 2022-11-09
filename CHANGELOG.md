@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Fixed
+
+- Fixed issue with product shelf's content not being updated.
+
 ## [1.1.2] - 2022-10-24
 
 ### Fixed
