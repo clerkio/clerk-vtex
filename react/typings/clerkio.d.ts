@@ -8,6 +8,10 @@ interface ClerkOrderAPI {
   email: string
 }
 
+type ContentParamArgs = Record<string, string | string[] | undefined>
+
+type DataProps = Record<string, string | string[] | undefined>
+
 /**
  * This is the Object returned by Clerk
  * @see https://docs.clerk.io/docs/clerkjs-content#dynamic-changes
@@ -16,12 +20,12 @@ type ClerkContentInterfaceObject = {
   /**
    * Load more results
    */
-  more: (number?) => void
+  more: (number?: number) => void
   /**
    * Setter/getter
-   * When passed two arguments it will cause a re-render of the content.
+   * When passed two arguments or an object it will cause a re-render of the content.
    */
-  param: (unknown) => void
+  param: (args: string | ContentParamArgs, optionalSetter?: string) => void
   /**
    * The HTML Element of the Content container.
    */

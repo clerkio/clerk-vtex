@@ -47,11 +47,7 @@ export const getProductIdFromContext = ({
   return type === 'product' ? id : ''
 }
 
-type ContentParamArgs = Record<string, string | string[] | undefined>
-
-export const createContentParamArgs = (
-  dataProps: Record<string, string | string[] | undefined>
-) => {
+export const createContentParamArgs = (dataProps: DataProps) => {
   if (!Object.keys(dataProps).length) {
     return null
   }
