@@ -24,7 +24,7 @@ This Apps Allow Stores to integrate with the **Recommendation Shelves** that **C
    You can confirm that the app has now been installed by running `vtex ls` again.
 2. Access the **Apps** section in your account's admin page and look for the **ClerkIO Integration** box. Once you find it, click on the box.
    Fill in the Fields as requested. For MultiBinding Sites, click on the enable configuration by binding to match a Clerk Store to each Binding.
-3. Generate the feeds for products, categories and orders by calling the following endpoints (replacing the account and workspace):
+3. Generate the feeds for products, categories and orders by making a POST request to the following endpoints (replacing the account and workspace):
 
 - Products feed:
 
