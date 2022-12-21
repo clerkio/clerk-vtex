@@ -26,23 +26,10 @@ This Apps Allow Stores to integrate with the **Recommendation Shelves** that **C
    Fill in the Fields as requested. For MultiBinding Sites, click on the enable configuration by binding to match a Clerk Store to each Binding.
 3. Generate the feeds for products, categories and orders by making a POST request to the following endpoints (replacing the account and workspace):
 
-- Products feed:
+Do a GET Request to this following endpoint:
+`https://app.io.vtex.com/vtex.clerkio-integration/v1/{{accountName}}/{{workspace}}/_v/clerkio-integration/clerk-feed/{{bindingId}}`
 
-```
-https://app.io.vtex.com/vtex.clerkio-integration/v1/{{account}}/{{workspace}}/_v/clerkio-integration/feed/products
-```
-
-- Categories feed:
-
-```
-https://app.io.vtex.com/vtex.clerkio-integration/v1/{{account}}/{{workspace}}/_v/clerkio-integration/feed/categories
-```
-
-- Orders feed\*:
-
-```
-https://app.io.vtex.com/vtex.clerkio-integration/v1/{{account}}/{{workspace}}/_v/clerkio-integration/feed/orders
-```
+It requires VtexIdclientAutCookie to be sent as header.
 
 _**Notes:**_
 
