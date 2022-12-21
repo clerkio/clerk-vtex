@@ -33,7 +33,8 @@ It requires VtexIdclientAutCookie to be sent as header.
 
 _**Notes:**_
 
-_**Depending on the size of your store Catalogue the feed might take some time to generate**_
+_**The first call to the generation of the feed will respond with an empty array.
+Depending on the size of your store Catalogue the feed might take some time to generate**_
 
 _\* **There is a [known issue](#known-issues) with the generation of the orders feed**_
 
