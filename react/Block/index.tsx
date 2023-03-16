@@ -72,6 +72,11 @@ const ClerkIoBlock: StorefrontFunctionComponent<BlockProps> = ({
     const { Clerk } = window
 
     if (adjustedClassName && templateName && Clerk && !loading) {
+      const clerk_element = document.querySelector(`.${adjustedClassName}`)
+      if(clerk_element){
+        clerk_element?.removeAttribute('data-clerk-content-id');
+        clerk_element.innerHTML = ''
+      }
       Clerk(
         'content',
         `.${adjustedClassName}`,
