@@ -72,10 +72,25 @@ const ClerkIoBlock: StorefrontFunctionComponent<BlockProps> = ({
     const { Clerk } = window
 
     if (adjustedClassName && templateName && Clerk && !loading) {
-      const clerk_element = document.querySelector(`.${adjustedClassName}`)
-      if(clerk_element){
-        clerk_element?.removeAttribute('data-clerk-content-id');
-        clerk_element.innerHTML = ''
+      const clerk_element = document.querySelectorAll(`.${adjustedClassName}`)
+      if(clerk_element.length > 0){
+        clerk_element[0]?.removeAttribute('data-clerk-content-id')
+        const data_target_selector = clerk_element[0].getAttribute('data-target')
+        const data_facets_target_selector = clerk_element[0].getAttribute('data-facets-target')
+        if(data_target_selector){
+          const clerk_data_target = document.querySelectorAll(data_target_selector)
+          if(clerk_data_target.length > 0){
+            clerk_data_target[0].innerHTML = ''
+          }
+        } else {
+          clerk_element[0].innerHTML = ''
+        }
+        if(data_facets_target_selector){
+          const clerk_data_facets_target = document.querySelectorAll(data_facets_target_selector)
+          if(clerk_data_facets_target.length > 0){
+            clerk_data_facets_target[0].innerHTML = ''
+          }
+        }
       }
       Clerk(
         'content',
