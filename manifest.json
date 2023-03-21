@@ -1,13 +1,13 @@
 {
   "name": "clerkio-integration",
-  "vendor": "vtex",
-  "version": "1.1.5",
+  "vendor": "vtex", // should be clerkio if we are allowed to remove this app and release own
+  "version": "1.1.6",
   "title": "Clerk.io Integration",
-  "description": "Integrate Cler.io powerful personalization to your store. ",
+  "description": "Integrate Clerk.io powerful personalization to your store. ",
   "billingOptions": {
-    "termsURL": "https://compliance.vtex.com/gdpr/policies/vtex-privacy-policy",
+    "termsURL": "https://www.clerk.io/terms-of-service",
     "support": {
-      "url": "https://support.vtex.com/hc/requests"
+      "url": "https://help.clerk.io"
     },
     "free": true,
     "type": "free",
