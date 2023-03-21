@@ -14,6 +14,17 @@ const createProductsQuery = (
       productId
       productName
       description
+      properties {
+        originalName
+        name
+        values
+      }
+      productReference
+      selectedProperties {
+        key
+        value
+      }
+      productReference
       priceRange {
         sellingPrice {
           highPrice
@@ -28,6 +39,15 @@ const createProductsQuery = (
         images {
           imageUrl
         }
+        variations {
+          originalName
+          name
+          values
+        }
+        estimatedDateArrival
+        ean
+        itemId
+        name
       }
       link
       linkText
