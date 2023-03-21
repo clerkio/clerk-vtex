@@ -1,6 +1,6 @@
 {
   "name": "clerkio-integration",
-  "vendor": "vtex", // should be clerkio if we are allowed to remove this app and release own
+  "vendor": "vtex",
   "version": "1.1.6",
   "title": "Clerk.io Integration",
   "description": "Integrate Clerk.io powerful personalization to your store. ",
