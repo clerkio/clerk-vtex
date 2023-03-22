@@ -1,6 +1,6 @@
 {
   "name": "clerkio-integration",
-  "vendor": "vtex",
+  "vendor": "clerkiopartnerdk",
   "version": "1.1.6",
   "title": "Clerk.io Integration",
   "description": "Integrate Clerk.io powerful personalization to your store. ",

@@ -7,6 +7,18 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [1.1.6] - 2023-03-22
+
+### Added
+
+- More fields to product feed
+- Icon to admin dashboard
+- Added future support for search template injection
+
+### Fixed
+
+- Element rehydration and destruction on route change
+
 ## [1.1.5] - 2022-11-25
 
 ## [1.1.4] - 2022-11-14
