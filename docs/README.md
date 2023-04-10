@@ -138,7 +138,6 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
           src="https://avatars.githubusercontent.com/u/58808189?v=4" width="100px;" alt="" /><br /><sub><b>César
             Ocampo</b></sub></a><br /><a
         href="https://github.com/vtex-apps/clerkio-integration/commits?author=cesarocampov" title="Code">=»</a></td>
-  </tr>
     <td align="center"><a href="https://github.com/FoulBachelor"><img
           src="https://avatars.githubusercontent.com/u/89036433?v=4" width="100px;" alt="" /><br /><sub><b>Alexander
             Stage</b></sub></a><br /><a
