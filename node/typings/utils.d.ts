@@ -10,6 +10,16 @@ interface AppConfig {
   salesChannel?: string
   defaultLocale?: string
   rootPath?: string
+  clerkioLiveSearchEnabled?: boolean
+  clerkSearchEnabled?: boolean
+  clerkioPowerstepEnabled?: boolean
+  clerkioBasketTrackingEnabled?: boolean
+  clerkioCollectEmails?: boolean
+  clerkioDisableOrderSync?: boolean
+  clerkioSearchFacetsEnabled?: boolean
+  clerkioSearchFacets?: string
+  clerkioSearchFacetsMultiselect?: string
+  clerkioSearchFacetsTitles?: string
 }
 
 interface BindingAppConfig {
@@ -19,6 +29,16 @@ interface BindingAppConfig {
   salesChannel: string
   defaultLocale: string
   rootPath?: string
+  clerkioLiveSearchEnabled?: boolean
+  clerkSearchEnabled?: boolean
+  clerkioPowerstepEnabled?: boolean
+  clerkioBasketTrackingEnabled?: boolean
+  clerkioCollectEmails?: boolean
+  clerkioDisableOrderSync?: boolean
+  clerkioSearchFacetsEnabled?: boolean
+  clerkioSearchFacets?: string
+  clerkioSearchFacetsMultiselect?: string
+  clerkioSearchFacetsTitles?: string
 }
 
 interface ListOrderParams {

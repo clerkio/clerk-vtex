@@ -25,6 +25,12 @@ const transformSingleBindingSettings = (
         salesChannel: appConfig.salesChannel ?? '',
         defaultLocale: appConfig.defaultLocale ?? '',
         rootPath: appConfig.rootPath ?? '',
+        clerkioLiveSearchEnabled: appConfig.clerkioLiveSearchEnabled ?? false,
+        clerkSearchEnabled: appConfig.clerkSearchEnabled ?? false,
+        clerkioPowerstepEnabled: appConfig.clerkioPowerstepEnabled ?? false,
+        clerkioBasketTrackingEnabled: appConfig.clerkioBasketTrackingEnabled ?? false,
+        clerkioCollectEmails: appConfig.clerkioCollectEmails ?? false,
+        clerkioDisableOrderSync: appConfig.clerkioDisableOrderSync ?? false,
       },
     ],
   }
