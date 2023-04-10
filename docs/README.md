@@ -126,9 +126,23 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- markdownlint-disable -->
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/filafb"><img src="https://avatars.githubusercontent.com/u/38737958?v=4" width="100px;" alt=""/><br /><sub><b>Fila</b></sub></a><br /><a href="https://github.com/vtex-apps/clerkio-integration/commits?author=filafb" title="Code">=»</a></td>
-    <td align="center"><a href="https://github.com/edyespinal"><img src="https://avatars.githubusercontent.com/u/17585823?v=4" width="100px;" alt=""/><br /><sub><b>Edy Espinal</b></sub></a><br /><a href="https://github.com/vtex-apps/clerkio-integration/commits?author=edyespinal" title="Code">=»</a></td>
-    <td align="center"><a href="https://github.com/cesarocampov"><img src="https://avatars.githubusercontent.com/u/58808189?v=4" width="100px;" alt=""/><br /><sub><b>César Ocampo</b></sub></a><br /><a href="https://github.com/vtex-apps/clerkio-integration/commits?author=cesarocampov" title="Code">=»</a></td>
+    <td align="center"><a href="https://github.com/filafb"><img
+          src="https://avatars.githubusercontent.com/u/38737958?v=4" width="100px;"
+          alt="" /><br /><sub><b>Fila</b></sub></a><br /><a
+        href="https://github.com/vtex-apps/clerkio-integration/commits?author=filafb" title="Code">=»</a></td>
+    <td align="center"><a href="https://github.com/edyespinal"><img
+          src="https://avatars.githubusercontent.com/u/17585823?v=4" width="100px;" alt="" /><br /><sub><b>Edy
+            Espinal</b></sub></a><br /><a
+        href="https://github.com/vtex-apps/clerkio-integration/commits?author=edyespinal" title="Code">=»</a></td>
+    <td align="center"><a href="https://github.com/cesarocampov"><img
+          src="https://avatars.githubusercontent.com/u/58808189?v=4" width="100px;" alt="" /><br /><sub><b>César
+            Ocampo</b></sub></a><br /><a
+        href="https://github.com/vtex-apps/clerkio-integration/commits?author=cesarocampov" title="Code">=»</a></td>
+  </tr>
+    <td align="center"><a href="https://github.com/FoulBachelor"><img
+          src="https://avatars.githubusercontent.com/u/89036433?v=4" width="100px;" alt="" /><br /><sub><b>Alexander
+            Stage</b></sub></a><br /><a
+        href="https://github.com/FoulBachelor/clerkio-integration-vtex/commits?author=FoulBachelor" title="Code">=»</a></td>
   </tr>
 </table>
 
