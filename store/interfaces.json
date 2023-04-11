@@ -10,5 +10,8 @@
   },
   "clerkio_searchinput": {
     "component": "ClerkIoSearchInputBlock"
+  },
+  "clerkio_livesearch": {
+    "component": "ClerkIoLiveSearchBlock"
   }
 }

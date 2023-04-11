@@ -8,20 +8,27 @@ const ClerkIoSearchInputBlock: StorefrontFunctionComponent<ClerkIoSearchInputBlo
     placeholderText,
 }) => {
 
-  return (
+  const captureQuery = () => {
+    console.log('change happened')
+  }
 
-    <div id="clerk-search-form">
-        <form action="/clerk-search" method="GET">
-            <input 
+  return (
+    <form
+    id="clerk-search-form"
+    action="/clerk-search" 
+    method="GET"
+    >
+      <label>
+        <input 
                 id="clerk-search-input"
                 placeholder={placeholderText ?? 'Search...'}
                 type="text" 
-                name="searchTerm" 
-                value=""
+                name="searchTerm"
+                onChange={captureQuery}
                 />
-        </form>
-    </div>
-
+      </label>
+      <input type="submit" value="Submit" />
+    </form>
   )
 }
 
