@@ -1,0 +1,7 @@
+{
+    "store.custom#clerk-search": {
+        "blocks": [
+            "clerkio_searchpage"
+        ]
+    }
+}
