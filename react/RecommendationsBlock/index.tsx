@@ -72,23 +72,23 @@ const ClerkIoBlock: StorefrontFunctionComponent<BlockProps> = ({
     const { Clerk } = window
 
     if (adjustedClassName && templateName && Clerk && !loading) {
-      const clerk_element = document.querySelectorAll(`.${adjustedClassName}`)
-      if(clerk_element.length > 0){
-        clerk_element[0]?.removeAttribute('data-clerk-content-id')
-        const data_target_selector = clerk_element[0].getAttribute('data-target')
-        const data_facets_target_selector = clerk_element[0].getAttribute('data-facets-target')
+      const clerk_element = document.querySelector(`.${adjustedClassName}`) ?? null
+      if(clerk_element){
+        clerk_element?.removeAttribute('data-clerk-content-id')
+        const data_target_selector = clerk_element.getAttribute('data-target')
+        const data_facets_target_selector = clerk_element.getAttribute('data-facets-target')
         if(data_target_selector){
-          const clerk_data_target = document.querySelectorAll(data_target_selector)
-          if(clerk_data_target.length > 0){
-            clerk_data_target[0].innerHTML = ''
+          const clerk_data_target = document.querySelector(data_target_selector) ?? null
+          if(clerk_data_target){
+            clerk_data_target.innerHTML = ''
           }
         } else {
-          clerk_element[0].innerHTML = ''
+          clerk_element.innerHTML = ''
         }
         if(data_facets_target_selector){
-          const clerk_data_facets_target = document.querySelectorAll(data_facets_target_selector)
-          if(clerk_data_facets_target.length > 0){
-            clerk_data_facets_target[0].innerHTML = ''
+          const clerk_data_facets_target = document.querySelector(data_facets_target_selector) ?? null
+          if(clerk_data_facets_target){
+            clerk_data_facets_target.innerHTML = ''
           }
         }
       }

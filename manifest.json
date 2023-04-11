@@ -91,41 +91,6 @@
         "description": "Root path that identifies the binding. Leave it empty if this binding doesn't have one. Don't include the leading and trailing slash",
         "type": "string"
       },
-      "clerkioLiveSearchEnabled": {
-        "title": "Clerk Live Search",
-        "description": "Enable Clerk Live Search functionality",
-        "type": "boolean"
-      },
-      "clerkioSearchEnabled": {
-        "title": "Clerk Search",
-        "description": "Enable Clerk Search functionality",
-        "type": "boolean"
-      },
-      "clerkioSearchFacetsEnabled": {
-        "title": "Clerk Search Facets",
-        "description": "Enable Clerk Search Facets functionality",
-        "type": "boolean"
-      },
-      "clerkioSearchFacets": {
-        "title": "Clerk Search Facet Attributes",
-        "description": "Give comma separated list of attributes to be used in facets \n Eg. price,categories,brand",
-        "type": "string"
-      },
-      "clerkioSearchFacetsMultiselect": {
-        "title": "Search Facet Multiselect Attributes",
-        "description": "Give comma separated list of attributes to be allowed for multiselection in searches \n Eg. price,categories,brand",
-        "type": "string"
-      },
-      "clerkioSearchFacetsTitles": {
-        "title": "Search Facet Attributes Titles",
-        "description": "Give comma separated list of attributes follow by colon and their given title \n Eg. price:Cost,categories:Collection,brand:Vendor",
-        "type": "string"
-      },
-      "clerkioPowerstepEnabled": {
-        "title": "Powerstep",
-        "description": "Enable Clerk Powerstep functionality",
-        "type": "boolean"
-      },
       "clerkioBasketTrackingEnabled": {
         "title": "Track Baskets",
         "description": "Allow Clerk to track baskets",

@@ -21,5 +21,21 @@
   "admin/cms/clerkio.search.block.facetsattributestitles.name": "Títulos de facetas",
   "admin/cms/clerkio.search.block.facetsattributestitles.description": "Forneça uma lista de atributos usados em facetas, seguido por dois pontos com o título fornecido. Por exemplo, preço:Preço,categorias:Coleção",
   "admin/cms/clerkio.search.block.facetsattributesmulti.name": "Seleção múltipla de facetas",
-  "admin/cms/clerkio.search.block.facetsattributesmulti.description": "Forneça uma lista de atributos usados em facetas como multiselecionáveis, separados por vírgulas."
+  "admin/cms/clerkio.search.block.facetsattributesmulti.description": "Forneça uma lista de atributos usados em facetas como multiselecionáveis, separados por vírgulas.",
+  "admin/cms/clerkio.search.block.facetsfilterbuttontext.name": "Filter Button Text",
+  "admin/cms/clerkio.search.block.facetsfilterbuttontext.description": "The text you want displayed on the toggle filters button",
+  "admin/cms/clerkio.search.block.facetsviewmoretext.name": "View More Button Text",
+  "admin/cms/clerkio.search.block.facetsviewmoretext.description": "The text displayed on the view more button in the facets",
+  "admin/cms/clerkio.search.block.facetssearchboxtext.name": "Search for ... Text",
+  "admin/cms/clerkio.search.block.facetssearchboxtext.description": "The placeholder text for the filters within the facets",
+  "admin/cms/clerkio.search.block.facetsdesignid.name": "Facets Design ID",
+  "admin/cms/clerkio.search.block.facetsdesignid.description": "The numeric ID of the facets design you wish to use",
+  "admin/cms/clerkio.search.block.facetspriceappend.name": "Facet Price Append",
+  "admin/cms/clerkio.search.block.facetspriceappend.description": "The symbol you want after the price ranges in the facets",
+  "admin/cms/clerkio.search.block.facetspriceprepend.name": "Facet Price Prepend",
+  "admin/cms/clerkio.search.block.facetspriceprepend.description": "The symbol you want before the price ranges in the facets",
+  "admin/cms/clerkio.searchinput.title": "Clerk Search Input Field",
+  "admin/cms/clerkio.searchinput.description": "Input field for /clerk-search route",
+  "admin/cms/clerkio.searchinput.block.placeholdertext.name": "Search Input Placeholder",
+  "admin/cms/clerkio.searchinput.block.placeholdertext.description": "Placeholder text for search input field"
 }
