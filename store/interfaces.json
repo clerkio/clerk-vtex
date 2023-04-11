@@ -2,7 +2,10 @@
   "pixel.CLERKIO": {
     "component": "index"
   },
-  "clerkio": {
+  "clerkio_recommendations": {
     "component": "ClerkIoBlock"
+  },
+  "clerkio_searchpage": {
+    "component": "ClerkIoSearchPageBlock"
   }
 }

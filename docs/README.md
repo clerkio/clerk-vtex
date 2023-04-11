@@ -71,7 +71,7 @@ _**Note: for this step onwards, please make sure you have already completed the 
 3. Go to VTEX Site Editor, and on the right side menu a ClerkIO block will be displayed. Click on it.
 
 4. Fill in the information required on the block.
-   `Block Class Name`: any name different from clerk.
+   `Block Class Name`: insert unique identifier for the block within the page it is used on. Eg. clerk-product-page-alternatives
    `Template Name`: insert the ID provided by Clerk on the previously created Content.
    `Product Logic`: match the recommendation logic to the one specified on the previously created Content on Clerk. User can get the details and usage for different product logics on Clerk.io. The available product logics are:
 

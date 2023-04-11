@@ -1,3 +1,3 @@
-import ClerkIoBlock from './Block'
+import ClerkIoBlock from './RecommendationsBlock'
 
 export default ClerkIoBlock
