@@ -32,13 +32,6 @@
     display: none;
 }
 
-.clerk-search-filters {
-
-}
-.clerk-search-results {
-
-}
-
 @media screen and (max-width: 800px) {
     .clerk-facets-container {
         display: none;

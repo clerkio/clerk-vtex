@@ -33,8 +33,13 @@ const ClerkIoSearchInputBlock: StorefrontFunctionComponent<ClerkIoSearchInputBlo
     ssr: false,
   })
 
+  const logEvent = () => {
+    console.log('TESTy')
+  }
+
   useEffect(() => {
     if(!loading){
+      /*
       const searchFormInput = document.querySelector('#clerk-search-input') ?? null
       const searchSubmit = document.querySelector('#clerk-search-submit') ?? null
       if(searchFormInput && searchSubmit){
@@ -42,15 +47,17 @@ const ClerkIoSearchInputBlock: StorefrontFunctionComponent<ClerkIoSearchInputBlo
         const searchPagePath = '/clerk-search'
         const searchPageParam = 'searchTerm'
         const searchTerm = searchFormInput.getAttribute('value') ?? ''
+        console.log('Added listener')
         searchSubmit.addEventListener('click', () => {
           window.location.replace(`${searchPagePath}?${searchPageParam}=${encodeURIComponent(searchTerm)}`)
         })
       }
+      */
     }
   }, [loading])
 
 
-  return (
+  return handles ? (
     <div>
       <form
       id='clerk-search-form'
@@ -65,7 +72,9 @@ const ClerkIoSearchInputBlock: StorefrontFunctionComponent<ClerkIoSearchInputBlo
           type="text" 
           name="searchTerm"
           />
-        <div className={`clerk-search-submit-wrap ${handles['clerk-search-submit-wrap']}`}>
+        <div 
+          onClick={logEvent}
+          className={`clerk-search-submit-wrap ${handles['clerk-search-submit-wrap']}`}>
           <button 
             id='clerk-search-submit'
             className={`clerk-search-submit ${handles['clerk-search-submit']}`}
@@ -88,7 +97,7 @@ const ClerkIoSearchInputBlock: StorefrontFunctionComponent<ClerkIoSearchInputBlo
         </div>
       </form>
     </div>
-  )
+  ) : null
 }
 
 ClerkIoSearchInputBlock.schema = {
