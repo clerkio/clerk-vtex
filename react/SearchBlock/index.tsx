@@ -113,9 +113,10 @@ const ClerkIoSearchPageBlock: StorefrontFunctionComponent<ClerkIoSearchPageProps
     }
   }, [adjustedClassName, loading, templateName])
 
-  return adjustedClassName && templateName ?(
+  return adjustedClassName && templateName ? (
 
     <div 
+      id="clerk-page-width"
       className={`clerk-page-width ${handles['clerk-page-width']}`}>
       <span
           id="clerk-search"

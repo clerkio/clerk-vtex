@@ -1,18 +1,8 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { useCssHandles } from 'vtex.css-handles'
-import { session } from 'vtex.store-resources/Queries'
-import { useQuery } from 'react-apollo'
 
 interface ClerkIoSearchInputBlockProps {
     placeholderText?: string
-}
-
-interface Session {
-  getSession: {
-    profile: {
-      email: string
-    } | null
-  }
 }
 
 const CSS_HANDLES = [
@@ -29,34 +19,6 @@ const ClerkIoSearchInputBlock: StorefrontFunctionComponent<ClerkIoSearchInputBlo
 
   const handles = useCssHandles(CSS_HANDLES)
 
-  const { loading } = useQuery<Session>(session, {
-    ssr: false,
-  })
-
-  const logEvent = () => {
-    console.log('TESTy')
-  }
-
-  useEffect(() => {
-    if(!loading){
-      /*
-      const searchFormInput = document.querySelector('#clerk-search-input') ?? null
-      const searchSubmit = document.querySelector('#clerk-search-submit') ?? null
-      if(searchFormInput && searchSubmit){
-        const { encodeURIComponent } = window
-        const searchPagePath = '/clerk-search'
-        const searchPageParam = 'searchTerm'
-        const searchTerm = searchFormInput.getAttribute('value') ?? ''
-        console.log('Added listener')
-        searchSubmit.addEventListener('click', () => {
-          window.location.replace(`${searchPagePath}?${searchPageParam}=${encodeURIComponent(searchTerm)}`)
-        })
-      }
-      */
-    }
-  }, [loading])
-
-
   return handles ? (
     <div>
       <form
@@ -72,15 +34,9 @@ const ClerkIoSearchInputBlock: StorefrontFunctionComponent<ClerkIoSearchInputBlo
           type="text" 
           name="searchTerm"
           />
-        <div 
-          onClick={logEvent}
+        <div
+          id='clerk-search-submit-wrap'
           className={`clerk-search-submit-wrap ${handles['clerk-search-submit-wrap']}`}>
-          <button 
-            id='clerk-search-submit'
-            className={`clerk-search-submit ${handles['clerk-search-submit']}`}
-            type="submit"
-            value=""
-          />
           <svg 
             className={ `vtex__icon-search clerk-search-submit-icon ${handles['clerk-search-submit-icon']}` }
             width="16" 
@@ -94,6 +50,12 @@ const ClerkIoSearchInputBlock: StorefrontFunctionComponent<ClerkIoSearchInputBlo
               fill="#333333"
               ></path>
           </svg>
+          <button 
+            id='clerk-search-submit'
+            className={`clerk-search-submit ${handles['clerk-search-submit']}`}
+            type="submit"
+            value=""
+          />
         </div>
       </form>
     </div>
