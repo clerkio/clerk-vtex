@@ -1,0 +1,49 @@
+.clerk-page-width {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0rem;
+    width: 100%;
+}
+
+.clerk-facets-container {
+    display: flex;
+}
+
+.clerk-search {
+    display: flex;
+}
+.clerk-show-facets {
+    margin: 0.2rem;
+    padding: 0.5rem;
+    border-radius: 0.2rem;
+    background-color: #333333;
+    color: #ffffff;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    text-align: center;
+}
+.clerk-flex-wrap {
+    margin: 0.2rem;
+    display: flex;
+}
+.clerk-facets-container {
+    display: none;
+}
+
+.clerk-search-filters {
+
+}
+.clerk-search-results {
+
+}
+
+@media screen and (max-width: 800px) {
+    .clerk-facets-container {
+        display: none;
+    }
+    .clerk-flex-wrap {
+        flex-direction: column;
+    }
+}

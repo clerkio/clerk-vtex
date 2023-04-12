@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import { session } from 'vtex.store-resources/Queries'
 import { useQuery } from 'react-apollo'
+import { useCssHandles } from 'vtex.css-handles'
 import {
   ensureSingleWordClass,
   adjustFacetTitles
@@ -27,6 +28,16 @@ interface Session {
   }
 }
 
+const CSS_HANDLES = [
+  'clerk-page-width',
+  'clerk-search',
+  'clerk-show-facets',
+  'clerk-flex-wrap',
+  'clerk-facets-container',
+  'clerk-search-filters',
+  'clerk-search-results'
+] as const
+
 const ClerkIoSearchPageBlock: StorefrontFunctionComponent<ClerkIoSearchPageProps> = ({
     blockClassName,
     templateName,
@@ -39,10 +50,18 @@ const ClerkIoSearchPageBlock: StorefrontFunctionComponent<ClerkIoSearchPageProps
     facetsPriceAppend,
     facetsPricePrepend,
 }) => {
+
+  const handles = useCssHandles(CSS_HANDLES)
+
   const toggleClerkFacets = () => {
     const facetContainer = document.querySelector('#clerk-facets-container') ?? null
     if(facetContainer){
-      facetContainer.classList.toggle('active')
+      const containerStyle = facetContainer.getAttribute('style') ?? null
+      if(!containerStyle){
+        facetContainer.setAttribute('style', 'display: block;')
+      } else {
+        facetContainer.removeAttribute('style')
+      }
     }
   }
 
@@ -96,7 +115,8 @@ const ClerkIoSearchPageBlock: StorefrontFunctionComponent<ClerkIoSearchPageProps
 
   return adjustedClassName && templateName ?(
 
-    <div className="page-width clerk-page-width">
+    <div 
+      className={`clerk-page-width ${handles['clerk-page-width']}`}>
       <span
           id="clerk-search"
           className={adjustedClassName}
@@ -105,12 +125,29 @@ const ClerkIoSearchPageBlock: StorefrontFunctionComponent<ClerkIoSearchPageProps
           data-facets-target="#clerk-search-filters"> 
       </span>
 
-      <div id="clerk-show-facets" onClick={toggleClerkFacets}>{facetsFilterButtonText ? facetsFilterButtonText : 'Filters'}</div>
-      <div className="clerk_flex_wrap">
-        <div id="clerk-facets-container">
-          <div id="clerk-search-filters"></div>
+      <div 
+      id="clerk-show-facets" 
+      className={`clerk-show-facets ${handles['clerk-show-facets']}`}
+      onClick={toggleClerkFacets}>
+        {facetsFilterButtonText ? facetsFilterButtonText : 'Filters'}
+      </div>
+      <div 
+        className={`clerk-flex-wrap ${handles['clerk-flex-wrap']}`}>
+        <div 
+          id="clerk-facets-container"
+          className={`clerk-facets-container ${handles['clerk-facets-container']}`}
+          >
+          <div 
+            id="clerk-search-filters"
+            className={`clerk-search-filters ${handles['clerk-search-filters']}`}
+            >
+          </div>
         </div>
-        <div id="clerk-search-results"></div>
+        <div 
+          id="clerk-search-results"
+          className={`clerk-search-results ${handles['clerk-search-results']}`}
+          >
+        </div>
       </div>
     </div>
 
