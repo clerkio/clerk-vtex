@@ -38,19 +38,19 @@ Depending on the size of your store Catalogue the feed might take some time to g
 
 _\* **There is a [known issue](#known-issues) with the generation of the orders feed**_
 
-## Configuration VTEX
+## Configuration VTEX Search & Recommendations
 
 _**Important: Before proceeding please make sure you have already completed the setup in ClerkIO following the instructions [below](#configuration-clerkio)**_
 
-1. On your store theme, Add `vtex.clerkio-integration` 1.x as a theme peerDependency in the `manifest.json` file
+1. On your store theme, Add `clerkio.clerkio-integration-vtex` 1.x as a theme peerDependency in the `manifest.json` file
 
    ```json
    "peerDependencies": {
-   "vtex.clerkio-integration": "1.x"
+   "clerkio.clerkio-integration-vtex": "1.x"
    }
    ```
 
-2. add the `clerkio`block anywhere on your store. Example: in `home.json`
+2. add the `clerkio_recommendations` block anywhere on your store. Example: in `home.json`
 
 ```json
 {
@@ -65,6 +65,7 @@ _**Important: Before proceeding please make sure you have already completed the 
   }
 }
 ```
+
 
 _**Note: for this step onwards, please make sure you have already completed the configuration on ClerkIO steps 1 - 4.**_
 
@@ -94,6 +95,18 @@ _**Note: for this step onwards, please make sure you have already completed the 
 | Customer Order History            | If there is a user logged in the store, the block will send the user email to Clerk as `data-email`                                                                                                             |
 | What Customers Look At Right Now  |
 | Recently Purchased Products       |
+
+You can also implement a search page in the same manner, by adding a block to your theme. The search page block is called: `clerkio_searchpage`
+
+The App will also create a dedicated search page route on `/clerk-search?searchTerm=__QUERY__`. This route already has the `clerkio_searchpage` block added in the body.
+
+The App also creates a component search input field for use in your header: `clerkio_searchinput`. By default this input field takes you to the dedicated page route created by the app. 
+
+Predictive search can also be enabled through the component named: `clerkio_livesearch`. This will listen for keystrokes on a selected input field and give real time search results.
+
+Both `clerkio_searchpage` and `clerkio_livesearch` have fields available in the Site Editor where you can control use of facets, translation texts.
+
+Live search and search page can be used independently, but the search page will only take the query as `searchTerm` from the urls params by default.
 
 ## Configuration ClerkIO
 

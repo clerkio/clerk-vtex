@@ -1,6 +1,6 @@
 {
   "name": "clerkio-integration-vtex",
-  "vendor": "clerkiopartnerdk",
+  "vendor": "clerkio",
   "version": "1.0.0",
   "title": "Clerk.io Integration",
   "description": "Integrate Clerk.io powerful personalization to your store. ",
@@ -89,21 +89,6 @@
         "title": "Binding Root Path",
         "description": "Root path that identifies the binding. Leave it empty if this binding doesn't have one. Don't include the leading and trailing slash",
         "type": "string"
-      },
-      "clerkioBasketTrackingEnabled": {
-        "title": "Track Baskets",
-        "description": "Allow Clerk to track baskets",
-        "type": "boolean"
-      },
-      "clerkioCollectEmails": {
-        "title": "Collect Emails",
-        "description": "Allow Clerk to collect emails from orders and subscribers",
-        "type": "boolean"
-      },
-      "clerkioDisableOrderSync": {
-        "title": "Disable Order Sync",
-        "description": "Exclude order data from full sync",
-        "type": "boolean"
       }
     }
   },
