@@ -61,7 +61,7 @@ _**Important: Before proceeding please make sure you have already completed the 
     ]
   },
   "responsive-layout.desktop#homepage": {
-    "children": ["clerkio"]
+    "children": ["clerkio_recommendations"]
   }
 }
 ```
