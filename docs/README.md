@@ -20,14 +20,14 @@ This Apps Allow Stores to integrate with the **Recommendation Shelves** that **C
 
 ## Initial Setup
 
-1. On the **vtex cli** run `vtex install vtex.clerkio-integration`.
+1. On the **vtex cli** run `vtex install clerkio.clerkio-integration-vtex`.
    You can confirm that the app has now been installed by running `vtex ls` again.
 2. Access the **Apps** section in your account's admin page and look for the **ClerkIO Integration** box. Once you find it, click on the box.
    Fill in the Fields as requested. For MultiBinding Sites, click on the enable configuration by binding to match a Clerk Store to each Binding.
 3. Generate the feeds for products, categories and orders by making a POST request to the following endpoints (replacing the account and workspace):
 
 Do a GET Request to this following endpoint:
-`https://app.io.vtex.com/vtex.clerkio-integration/v1/{{accountName}}/{{workspace}}/_v/clerkio-integration/clerk-feed/{{bindingId}}`
+`https://app.io.vtex.com/clerkio.clerkio-integration-vtex/v1/{{accountName}}/{{workspace}}/_v/clerkio-integration/clerk-feed/{{bindingId}}`
 
 It requires VtexIdclientAutCookie to be sent as header.
 
@@ -116,7 +116,7 @@ Live search and search page can be used independently, but the search page will 
    and click on data sync. _**This feed URL is exclusive for the use of ClerkIO.**_
 
 If you want to validate your store's feed use this endpoint instead:
-`https://app.io.vtex.com/vtex.clerkio-integration/v1/{{accountName}}/{{workspace}}/_v/clerkio-integration/clerk-feed/{{bindingId}}`
+`https://app.io.vtex.com/clerkio.clerkio-integration-vtex/v1/{{accountName}}/{{workspace}}/_v/clerkio-integration/clerk-feed/{{bindingId}}`
 this endpoint requires VTEX authentication.
 
 3. Go to Recommendations -> Design and create a new Shelf design to suit your store Style.
