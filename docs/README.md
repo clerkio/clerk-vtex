@@ -108,6 +108,38 @@ Both `clerkio_searchpage` and `clerkio_livesearch` have fields available in the 
 
 Live search and search page can be used independently, but the search page will only take the query as `searchTerm` from the urls params by default.
 
+`clerkio_searchpage`:
+
+Parameters:
+
+Block Class Name :: Class Name in DOM. Eg. `product-page-alternatives`
+Template Name :: Template Content Name from clerk.io. Eg. `@product-page-alternatives`
+Facets :: Attributes to be used for facets, separated by commas. Eg. `price,categories`
+Facets Titles :: Attribute titles as rendered in the facets. Eg. `price:Prix,categories:Collection`
+Multiselect Facets :: Attributes to be used for facets, with multiple allowed selections within a group. Eg. `price,categories`
+Filter Button Text :: Localized Text Message for Facets toggle button. Eg. `Options`
+View More Button Text :: Localized Text Message on the View More Button on facets with more than 12 entries. Eg. `Show All`
+Search for ... Text :: Localized placeholder in the text filter field within a facet group. Eg. `Recherche ici`
+Facets Design ID :: The ID of the custom Facets Design Template you may wish to use. Eg. `123455`
+Facets Price Append :: The Symbol you may wish to append to prices in the facets.
+Facets Price Prepend :: The Symbol you may wish to prepend to prices in the facets.
+
+`clerkio_livesearch`:
+
+Parameters:
+
+Block Class Name :: Class Name in DOM. Eg. `product-page-alternatives`
+Template Name :: Template Content Name from clerk.io. Eg. `@product-page-alternatives`
+Instant Search Selector :: CSS Selector for Search Input . Eg. `#clerk-search-input`
+Instant Search Suggestions :: Number of Search Suggestions. Eg. `3`
+Instant Search Categories :: Number of Search Categories. Eg. `3`
+Instant Search Pages :: Number of Search Pages. Eg. `2`
+Instant Search Positioning :: Position of Live Search. Eg. `left`
+
+`clerkio_searchinput`:
+
+Search Input Placeholder :: Placeholder text inside dedicated Search Input Field. Eg. `Suche hier...`
+
 ## Configuration ClerkIO
 
 1. Create a new store on ClerkIO dashboard. For multi-binding sites, each binding should be a store on Clerk.
