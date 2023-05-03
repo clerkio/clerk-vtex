@@ -20,7 +20,7 @@ export default class GraphQLServer extends AppClient {
           extensions: {
             persistedQuery: {
               provider,
-              sender: 'clerkio.clerkio-integration-vtex@0.x',
+              sender: 'clerkiopartnerdk.integration-vtex@1.x',
             },
           },
           query,
