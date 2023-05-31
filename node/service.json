@@ -7,31 +7,31 @@
   "workers": 4,
   "routes": {
     "createFeedCategories": {
-      "path": "/_v/clerkio-integration/feed/categories",
+      "path": "/_v/integration-vtex/feed/categories",
       "public": false
     },
     "createFeedProducts": {
-      "path": "/_v/clerkio-integration/feed/products",
+      "path": "/_v/integration-vtex/feed/products",
       "public": false
     },
     "createFeedOrders": {
-      "path": "/_v/clerkio-integration/feed/orders",
+      "path": "/_v/integration-vtex/feed/orders",
       "public": false
     },
     "feedStatus": {
-      "path": "/_v/clerkio-integration/feed/status/:type",
+      "path": "/_v/integration-vtex/feed/status/:type",
       "public": true
     },
     "feed": {
-      "path": "/_v/clerkio-integration/clerk-feed/:bindingId",
+      "path": "/_v/integration-vtex/clerk-feed/:bindingId",
       "public": true
     },
     "authFeed": {
-      "path": "/_v/clerkio-integration/clerk-feed/:bindingId",
+      "path": "/_v/integration-vtex/clerk-feed/:bindingId",
       "public": false
     },
     "integrationStatus": {
-      "path": "/_v/clerkio-integration/clerk-feed/:bindingId/status",
+      "path": "/_v/integration-vtex/clerk-feed/:bindingId/status",
       "public": false
     }
   }
