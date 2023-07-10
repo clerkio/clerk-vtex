@@ -73,7 +73,7 @@ const ClerkIoBlock: StorefrontFunctionComponent<BlockProps> = ({
 
     if (adjustedClassName && templateName && Clerk && !loading) {
       const clerk_element = document.querySelector(`.${adjustedClassName}`) ?? null
-      if(clerk_element){
+      if(clerk_element && (! clerk_element.getAttribute('data-email') || '' === clerk_element.getAttribute('data-email') )){
         clerk_element?.removeAttribute('data-clerk-content-id')
         const data_target_selector = clerk_element.getAttribute('data-target')
         const data_facets_target_selector = clerk_element.getAttribute('data-facets-target')
