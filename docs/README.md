@@ -27,7 +27,7 @@ This Apps Allow Stores to integrate with the **Recommendation Shelves** that **C
 3. Generate the feeds for products, categories and orders by making a POST request to the following endpoints (replacing the account and workspace):
 
 Do a GET Request to this following endpoint:
-`https://app.io.vtex.com/clerkiopartnerdk.integration-vtex/v1/{{accountName}}/{{workspace}}/_v/clerkio-integration/clerk-feed/{{bindingId}}`
+`https://app.io.vtex.com/clerkiopartnerdk.integration-vtex/v1/{{accountName}}/{{workspace}}/_v/integration-vtex/clerk-feed/{{bindingId}}`
 
 It requires VtexIdclientAutCookie to be sent as header.
 
@@ -66,7 +66,6 @@ _**Important: Before proceeding please make sure you have already completed the 
 }
 ```
 
-
 _**Note: for this step onwards, please make sure you have already completed the configuration on ClerkIO steps 1 - 4.**_
 
 3. Go to VTEX Site Editor, and on the right side menu a ClerkIO block will be displayed. Click on it.
@@ -100,7 +99,7 @@ You can also implement a search page in the same manner, by adding a block to yo
 
 The App will also create a dedicated search page route on `/clerk-search?searchTerm=__QUERY__`. This route already has the `clerkio_searchpage` block added in the body.
 
-The App also creates a component search input field for use in your header: `clerkio_searchinput`. By default this input field takes you to the dedicated page route created by the app. 
+The App also creates a component search input field for use in your header: `clerkio_searchinput`. By default this input field takes you to the dedicated page route created by the app.
 
 Predictive search can also be enabled through the component named: `clerkio_livesearch`. This will listen for keystrokes on a selected input field and give real time search results.
 
@@ -134,8 +133,6 @@ Facets Price Append :: The Symbol you may wish to append to prices in the facets
 
 Facets Price Prepend :: The Symbol you may wish to prepend to prices in the facets.
 
-
-
 `clerkio_livesearch`:
 
 Parameters:
@@ -162,11 +159,11 @@ Search Input Placeholder :: Placeholder text inside dedicated Search Input Field
 
 1. Create a new store on ClerkIO dashboard. For multi-binding sites, each binding should be a store on Clerk.
 2. Go to Data -> Data Sync Settings -> Sync Method and Select `ClerkIO JSON Feed`. once prompted to insert the url, insert the following URL format:
-   `https://{{accountName}}.myvtex.com/_v/clerkio-integration/clerk-feed/{{bindingId}}`
+   `https://{{accountName}}.myvtex.com/_v/integration-vtex/clerk-feed/{{bindingId}}`
    and click on data sync. _**This feed URL is exclusive for the use of ClerkIO.**_
 
 If you want to validate your store's feed use this endpoint instead:
-`https://app.io.vtex.com/clerkiopartnerdk.integration-vtex/v1/{{accountName}}/{{workspace}}/_v/clerkio-integration/clerk-feed/{{bindingId}}`
+`https://app.io.vtex.com/clerkiopartnerdk.integration-vtex/v1/{{accountName}}/{{workspace}}/_v/integration-vtex/clerk-feed/{{bindingId}}`
 this endpoint requires VTEX authentication.
 
 3. Go to Recommendations -> Design and create a new Shelf design to suit your store Style.
