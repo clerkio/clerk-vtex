@@ -89,11 +89,11 @@ const ClerkIoSearchPageBlock: StorefrontFunctionComponent<ClerkIoSearchPageProps
       if(facetsAttributeTitles){
         const adjustedFacetTitles = adjustFacetTitles(facetsAttributeTitles)
         if(typeof adjustedFacetTitles == 'string'){
-          clerkSearchSpan.setAttribute('data-facets-attributes', adjustedFacetTitles)
+          clerkSearchSpan.setAttribute('data-facets-titles', adjustedFacetTitles)
         }
       }
       if(facetsAttributesMulti){
-        clerkSearchSpan.setAttribute('data-facets-attributes', JSON.stringify(facetsAttributesMulti.split(',')))
+        clerkSearchSpan.setAttribute('data-facets-multiselect-attributes', JSON.stringify(facetsAttributesMulti.split(',')))
       }
       if(facetsViewMoreText){
         clerkSearchSpan.setAttribute('data-facets-view-more-text', facetsViewMoreText)
