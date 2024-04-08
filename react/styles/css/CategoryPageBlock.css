@@ -1,0 +1,45 @@
+.clerk-page-width {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0rem;
+    width: 100%;
+}
+
+.clerk-facets-container {
+    display: block;
+}
+
+.clerk-show-facets {
+    display: none;
+}
+
+.clerk-search {
+    display: flex;
+}
+
+.clerk-flex-wrap {
+    margin: 0.2rem;
+    display: flex;
+}
+
+@media screen and (max-width: 800px) {
+    .clerk-show-facets {
+        display: block;
+        margin: 0.2rem;
+        padding: 0.5rem;
+        border-radius: 0.2rem;
+        background-color: #333333;
+        color: #ffffff;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        text-align: center;
+    }
+    .clerk-facets-container {
+        display: none;
+    }
+    .clerk-flex-wrap {
+        flex-direction: column;
+    }
+}
