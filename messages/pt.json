@@ -34,6 +34,8 @@
   "admin/cms/clerkio.search.block.facetspriceappend.description": "The symbol you want after the price ranges in the facets",
   "admin/cms/clerkio.search.block.facetspriceprepend.name": "Facet Price Prepend",
   "admin/cms/clerkio.search.block.facetspriceprepend.description": "The symbol you want before the price ranges in the facets",
+  "admin/cms/clerkio.category.title": "Lista de productos Clerk.io",
+  "admin/cms/clerkio.category.description": "Bloco cria página inicial de la lista usando Clerk API",
   "admin/cms/clerkio.category.block.class.name": "Nome da Classe do Bloco",
   "admin/cms/clerkio.category.block.class.description": "Nome de classe exclusivo - Evite usar a mesma classe para diferentes Blocos de funcionário. Não use 'clerk' como nome de classe",
   "admin/cms/clerkio.category.block.template.name": "Nome do modelo",
