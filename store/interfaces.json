@@ -13,5 +13,8 @@
   },
   "clerkio_livesearch": {
     "component": "ClerkIoLiveSearchBlock"
+  },
+  "clerkio_categorypage": {
+    "component": "ClerkIoCategoryPageBlock"
   }
 }
