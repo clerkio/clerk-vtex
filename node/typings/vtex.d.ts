@@ -21,11 +21,14 @@ interface ProductInfo {
   productId: string
   productName: string
   description: string
+  properties: ProductProperty[]
+  productReference: string
+  selectedProperties: SelectedProperty[]
   priceRange: {
     sellingPrice: PriceRange
     listPrice: PriceRange
   }
-  items: Images[]
+  items: Item[]
   link: string
   linkText: string
   categoryTree: Category[]
@@ -33,12 +36,38 @@ interface ProductInfo {
   releaseDate: number | null
 }
 
+interface SelectedProperty {
+  key: string
+  value: string
+}
+
+interface Reference {
+  key: string
+  value: string
+}
+
+interface Item {
+  itemId: string
+  name: string
+  ean: string
+  referenceId: Reference[]
+  images: Image[]
+  variations: ProductProperty[]
+  estimatedDateArrival: string
+}
+
+interface ProductProperty {
+  originalName: string
+  name: string
+  values: string[]
+}
+
 interface PriceRange {
   highPrice: number
   lowPrice: number
 }
 
-interface Images {
+interface Image {
   images: ImageUrl[]
 }
 interface ImageUrl {

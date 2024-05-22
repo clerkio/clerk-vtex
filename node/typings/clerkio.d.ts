@@ -38,6 +38,14 @@ interface ClerkProduct {
    * @memberOf ClerkProduct
    */
   created_at: number
+  reference?: string
+  variant_ids?: string[]
+  variant_eans?: string[]
+  variant_names?: string[]
+  variant_references?: string[]
+  variant_properties?: string[]
+  variant_arrival_times?: string[]
+  variant_images?: string[]
 }
 
 interface ClerkCategory {

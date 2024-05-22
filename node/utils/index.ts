@@ -138,27 +138,70 @@ export function transformProductToClerk(
     return
   }
 
+  let variant_images: string[] = [];
+  let variant_ids: string[] = [];
+  let variant_names: string[] = [];
+  let variant_eans: string[] = [];
+  let variant_references: string[] = [];
+  let variant_properties: string[] = [];
+  let variant_arrival_times: string[] = [];
+
+  product.items.forEach(item => {
+    // Handle adding all variant images
+    item.images.forEach(image => {
+      image.images.forEach(imageObject => {
+        variant_images.push(imageObject.imageUrl);
+      })
+    })
+    // Handle adding all variant skus
+    variant_ids.push(item.itemId)
+    // Handle adding all variant eans
+    variant_eans.push(item.ean)
+    // Handle adding all variant names
+    variant_names.push(item.name)
+    // Handle adding arrival times
+    variant_arrival_times.push(item.estimatedDateArrival)
+    // Handle adding product variant references
+    item.referenceId.forEach(reference => {
+      variant_references.push(reference.value)
+    })
+    // Handle adding product variant properties
+    item.variations.forEach(variation => {
+      variant_properties.concat(variation.values)
+    })
+  })
+
+
   const dateString = product.releaseDate ?? new Date()
   // Clerk asks the dates to be a UNIX timestamp (in seconds)
-  // .getTime generates it in miliseconds
+  // .getTime generates it in milliseconds
   const date = Math.floor(new Date(dateString).getTime() / 1000)
 
   const productUrl = rootPath
     ? `/${rootPath}/${product.linkText}/p`
     : `/${product.linkText}/p`
 
-  return {
+  const clerkProduct = {
     id: product.productId,
     name: product.productName,
     description: product.description,
     price: sellingPrice.highPrice,
     list_price: listPrice.highPrice,
-    image: product.items[0].images[0].imageUrl,
+    image: variant_images[0] ?? "",
     url: productUrl,
     categories: product.categoryTree.map(category => category.id),
     brand: product.brand,
     created_at: date,
+    reference: product.productReference,
+    variant_ids: variant_ids,
+    variant_eans: variant_eans,
+    variant_names: variant_names,
+    variant_references: variant_references,
+    variant_properties: variant_properties,
+    variant_arrival_times: variant_arrival_times,
+    variant_images: variant_images
   }
+  return clerkProduct
 }
 
 export function transformCategoriesToClerk(
