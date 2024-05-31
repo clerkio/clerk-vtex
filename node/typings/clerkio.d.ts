@@ -30,14 +30,8 @@ interface ClerkProduct {
   image: string
   url: string
   categories: number[]
-  brand?: string
-  /**
-   * Unix timestamp for when the product was created.
-   *
-   * @type {number}
-   * @memberOf ClerkProduct
-   */
   created_at: number
+  brand?: string
   reference?: string
   variant_ids?: string[]
   variant_eans?: string[]

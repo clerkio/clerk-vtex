@@ -24,7 +24,6 @@ const createProductsQuery = (
         key
         value
       }
-      productReference
       priceRange {
         sellingPrice {
           highPrice
@@ -46,6 +45,7 @@ const createProductsQuery = (
         }
         estimatedDateArrival
         ean
+        referenceId
         itemId
         name
       }

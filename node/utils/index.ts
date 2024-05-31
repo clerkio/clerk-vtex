@@ -149,14 +149,14 @@ export function transformProductToClerk(
   product.items.forEach(item => {
     // Handle adding all variant images
     item.images.forEach(image => {
-      image.images.forEach(imageObject => {
-        variant_images.push(imageObject.imageUrl);
-      })
+      variant_images.push(image.imageUrl);
     })
     // Handle adding all variant skus
     variant_ids.push(item.itemId)
     // Handle adding all variant eans
-    variant_eans.push(item.ean)
+    if(item.ean){
+      variant_eans.push(item.ean)
+    }
     // Handle adding all variant names
     variant_names.push(item.name)
     // Handle adding arrival times
