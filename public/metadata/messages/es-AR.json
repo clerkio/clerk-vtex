@@ -2,10 +2,16 @@
   "name": "Clerk.io",
   "headline": "Cookieless Personalization",
   "overview": "",
-  "features": [],
+  "features": [
+    "Search",
+    "Recommendations",
+    "Affiliate Tracking"
+  ],
   "additionalInformation": "",
   "websiteURL": "https://www.clerk.io/",
   "support": {
-    "url": "https://help.clerk.io/"
+    "url": "https://help.clerk.io/",
+    "email": "support@clerk.io",
+    "phone": "0045 70555100"
   }
 }
