@@ -147,6 +147,10 @@ export function transformProductToClerk(
     ? `/${rootPath}/${product.linkText}/p`
     : `/${product.linkText}/p`
 
+  const variant_ids = product.items.map(item => item.itemId)
+  const variant_eans = product.items.map(item => item.ean)
+  const variant_names = product.items.map(item => item.name)
+
   return {
     id: product.productId,
     name: product.productName,
@@ -158,6 +162,9 @@ export function transformProductToClerk(
     categories: product.categoryTree.map(category => category.id),
     brand: product.brand,
     created_at: date,
+    variant_ids: variant_ids,
+    variant_eans: variant_eans,
+    variant_names: variant_names
   }
 }
 

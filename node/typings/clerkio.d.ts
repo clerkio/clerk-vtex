@@ -37,7 +37,10 @@ interface ClerkProduct {
    * @type {number}
    * @memberOf ClerkProduct
    */
-  created_at: number
+  created_at: number,
+  variant_ids?: any,
+  variant_eans?: any,
+  variant_names?: any
 }
 
 interface ClerkCategory {

@@ -24,7 +24,6 @@ const createProductsQuery = (
         key
         value
       }
-      productReference
       priceRange {
         sellingPrice {
           highPrice
