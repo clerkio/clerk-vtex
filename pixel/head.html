@@ -6,18 +6,17 @@
       return
     }
 
-    // Add script here
     // Start of Clerk.io E-commerce Personalisation tool - www.clerk.io
     ;(function (w, d) {
-      var p = d.title.toLocaleLowerCase().replace(/[^a-z-_]/g, '')
-      var e = d.createElement('script')
-      e.type = 'text/javascript'
-      e.async = true
-      e.defer = true
-      e.src = `https://custom.clerk.io/${p}.js`
-      var s = d.getElementsByTagName('script')[0]
-      s.parentNode.insertBefore(e, s)
-      w.__clerk_q = w.__clerk_q || []
+      var p = d.title.toLocaleLowerCase().replace(/[^a-z-_]/g, '');
+      var e = d.createElement('script');
+      e.type = 'text/javascript';
+      e.async = true;
+      e.defer = true;
+      e.src = `https://custom.clerk.io/${p}.js`;
+      var s = d.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(e, s);
+      w.__clerk_q = w.__clerk_q || [];
       w.Clerk =
         w.Clerk ||
         function () {
@@ -27,6 +26,6 @@
 
     Clerk('config', {
       key: token,
-    })
-  })()
+    });
+  })();
 </script>
