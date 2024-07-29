@@ -25,6 +25,12 @@ export interface EventData {
   currency: string
 }
 
+export interface DevToolsData {
+  source: string
+  eventName: 'debug:hello'
+  hello: boolean
+}
+
 export interface PageInfoData extends EventData {
   event: 'pageInfo'
   eventName: 'vtex:pageInfo'

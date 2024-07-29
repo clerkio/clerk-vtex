@@ -34,6 +34,34 @@ export function handleEvents(e: PixelMessage) {
       break
     }
 
+    case 'vtex:userData': {
+      const {
+        email: email
+      } = e.data
+
+      const { Clerk } = window
+
+      if (email && Clerk?._config?.collect_email) {
+        Clerk('call', 'log/email', { email: email })
+      }
+
+      break
+    }
+
+    case 'vtex:newsletterSubscription': {
+      const {
+        email: email
+      } = e.data
+
+      const { Clerk } = window
+
+      if (email && Clerk?._config?.collect_email) {
+        Clerk('call', 'log/email', { email: email })
+      }
+
+      break
+    }
+
     default: {
       break
     }

@@ -22,6 +22,7 @@ const transformSingleBindingSettings = (
         bindingId,
         clerkioToken: appConfig.clerkioToken ?? '',
         clerkioPrivateToken: appConfig.clerkioPrivateToken ?? '',
+        clerkioTrackEmails: appConfig.clerkioTrackEmails ?? false,
         salesChannel: appConfig.salesChannel ?? '',
         defaultLocale: appConfig.defaultLocale ?? '',
         rootPath: appConfig.rootPath ?? '',

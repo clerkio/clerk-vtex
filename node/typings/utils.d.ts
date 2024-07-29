@@ -7,6 +7,7 @@ interface AppConfig {
    */
   clerkioToken?: string
   clerkioPrivateToken?: string
+  clerkioTrackEmails?: boolean
   salesChannel?: string
   defaultLocale?: string
   rootPath?: string
@@ -26,6 +27,7 @@ interface BindingAppConfig {
   bindingId: string
   clerkioToken: string
   clerkioPrivateToken: string
+  clerkioTrackEmails?: boolean
   salesChannel: string
   defaultLocale: string
   rootPath?: string
