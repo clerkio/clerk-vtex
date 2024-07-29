@@ -42,7 +42,21 @@ export function handleEvents(e: PixelMessage) {
       const { Clerk } = window
 
       if (email) {
-        Clerk('call', 'log/email', email)
+        Clerk('call', 'log/email', { email: email })
+      }
+
+      break
+    }
+
+    case 'vtex:newsletterSubscription': {
+      const {
+        email: email
+      } = e.data
+
+      const { Clerk } = window
+
+      if (email) {
+        Clerk('call', 'log/email', { email: email })
       }
 
       break
