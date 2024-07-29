@@ -75,6 +75,11 @@
         "description": "This is the private key to validate Clerk requests to get the feed",
         "type": "string"
       },
+      "clerkioTrackEmails": {
+        "title": "Collect user Emails",
+        "description": "Collect the email of logged in users and newsletter subscribers for tracking purposes.",
+        "type": "boolean"
+      },
       "salesChannel": {
         "title": "Sales Channel",
         "description": "Sales Channel associated to the selected binding",
