@@ -41,7 +41,7 @@ export function handleEvents(e: PixelMessage) {
 
       const { Clerk } = window
 
-      if (email) {
+      if (email && Clerk?._config?.collect_email) {
         Clerk('call', 'log/email', { email: email })
       }
 
@@ -55,7 +55,7 @@ export function handleEvents(e: PixelMessage) {
 
       const { Clerk } = window
 
-      if (email) {
+      if (email && Clerk?._config?.collect_email) {
         Clerk('call', 'log/email', { email: email })
       }
 

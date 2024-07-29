@@ -1,6 +1,7 @@
 <script>
   ;(function () {
     var token = '{{settings.clerkioToken}}'
+    var collectEmails = '{{settings.clerkioTrackEmails}}'
     if (!token) {
       console.error('Missing or invalid Clerk.io API key')
       return
@@ -26,6 +27,7 @@
 
     Clerk('config', {
       key: token,
+      collect_email: collectEmails == 'true' ?? false
     });
   })();
 </script>
