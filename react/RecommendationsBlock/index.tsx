@@ -70,27 +70,33 @@ const ClerkIoBlock: StorefrontFunctionComponent<BlockProps> = ({
 
   useEffect(() => {
     const { Clerk } = window
+    if(typeof Clerk._last_props == 'undefined'){
+      Clerk['_last_props'] = dataProps
+    }
 
     if (adjustedClassName && templateName && Clerk && !loading) {
       const clerk_element = document.querySelector(`.${adjustedClassName}`) ?? null
-      if(clerk_element && (! clerk_element.getAttribute('data-email') || '' === clerk_element.getAttribute('data-email') )){
+      if(clerk_element && Clerk._last_props && Clerk._last_props != dataProps){
+        if((! clerk_element.getAttribute('data-email') || '' === clerk_element.getAttribute('data-email') )){
+          const data_target_selector = clerk_element.getAttribute('data-target')
+          const data_facets_target_selector = clerk_element.getAttribute('data-facets-target')
+          if(data_target_selector){
+            const clerk_data_target = document.querySelector(data_target_selector) ?? null
+            if(clerk_data_target){
+              clerk_data_target.innerHTML = ''
+            }
+          } else {
+            clerk_element.innerHTML = ''
+          }
+          if(data_facets_target_selector){
+            const clerk_data_facets_target = document.querySelector(data_facets_target_selector) ?? null
+            if(clerk_data_facets_target){
+              clerk_data_facets_target.innerHTML = ''
+            }
+          }
+
+        }
         clerk_element?.removeAttribute('data-clerk-content-id')
-        const data_target_selector = clerk_element.getAttribute('data-target')
-        const data_facets_target_selector = clerk_element.getAttribute('data-facets-target')
-        if(data_target_selector){
-          const clerk_data_target = document.querySelector(data_target_selector) ?? null
-          if(clerk_data_target){
-            clerk_data_target.innerHTML = ''
-          }
-        } else {
-          clerk_element.innerHTML = ''
-        }
-        if(data_facets_target_selector){
-          const clerk_data_facets_target = document.querySelector(data_facets_target_selector) ?? null
-          if(clerk_data_facets_target){
-            clerk_data_facets_target.innerHTML = ''
-          }
-        }
       }
       Clerk(
         'content',
