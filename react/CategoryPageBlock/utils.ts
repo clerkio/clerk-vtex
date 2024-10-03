@@ -86,3 +86,44 @@ export const createContentParamArgs = (dataProps: DataProps) => {
 
   return contentParamArgs
 }
+
+export const setDataValues = (
+  context: Document,
+  facetsAttributes: string|undefined,
+  facetsAttributeTitles: string|undefined,
+  facetsAttributesMulti: string|undefined,
+  facetsViewMoreText: string|undefined,
+  facetsDesignId: string|undefined,
+  facetsPriceAppend: string|undefined,
+  facetsPricePrepend: string|undefined
+) => {
+  const el = context.querySelector('#clerk-search');
+  if(!el){ return }
+  if(!facetsAttributes){
+    const elToggle = context.querySelector('#clerk-show-facets');
+    if(elToggle){ elToggle.remove() }
+  } else {
+    el.setAttribute('data-facets-attributes', JSON.stringify(facetsAttributes))
+  }
+  if(facetsAttributeTitles){
+    const adjustedFacetTitles = adjustFacetTitles(facetsAttributeTitles)
+    if(typeof adjustedFacetTitles == 'string'){
+      el.setAttribute('data-facets-titles', adjustedFacetTitles)
+    }
+  }
+  if(facetsAttributesMulti){
+    el.setAttribute('data-facets-multiselect-attributes', JSON.stringify(facetsAttributesMulti))
+  }
+  if(facetsViewMoreText){
+    el.setAttribute('data-facets-view-more-text', facetsViewMoreText)
+  }
+  if(facetsDesignId){
+    el.setAttribute('data-facets-design', facetsDesignId)
+  }
+  if(facetsPriceAppend){
+    el.setAttribute('data-facets-price-append', facetsPriceAppend)
+  }
+  if(facetsPricePrepend){
+    el.setAttribute('data-facets-price-prepend', facetsPricePrepend)
+  }
+}

@@ -9,7 +9,7 @@ import {
   createClerkDataProps,
   ensureSingleWordClass,
   getCategoryIdFromContext,
-  adjustFacetTitles
+  setDataValues
 } from './utils'
 
 
@@ -101,39 +101,17 @@ const ClerkIoCategoryPageBlock: StorefrontFunctionComponent<ClerkIoCategoryPageP
 
   useEffect(() => {
     const { Clerk } = window
-    // TODO: Remove the use of searchTerm.
-    // Can be used to change the query after render.
-    const clerkSearchSpan = document.querySelector('#clerk-search') ?? null
-    if(clerkSearchSpan && !loading && Clerk){
-      if(facetsAttributes){
-        clerkSearchSpan.setAttribute('data-facets-attributes', JSON.stringify(facetsAttributes.split(',')))
-      } else {
-        const clerkFacetToggle = document.querySelector('#clerk-show-facets') ?? null
-        if(clerkFacetToggle){
-          clerkFacetToggle.remove()
-        }
-      }
-      if(facetsAttributeTitles){
-        const adjustedFacetTitles = adjustFacetTitles(facetsAttributeTitles)
-        if(typeof adjustedFacetTitles == 'string'){
-          clerkSearchSpan.setAttribute('data-facets-titles', adjustedFacetTitles)
-        }
-      }
-      if(facetsAttributesMulti){
-        clerkSearchSpan.setAttribute('data-facets-multiselect-attributes', JSON.stringify(facetsAttributesMulti.split(',')))
-      }
-      if(facetsViewMoreText){
-        clerkSearchSpan.setAttribute('data-facets-view-more-text', facetsViewMoreText)
-      }
-      if(facetsDesignId){
-        clerkSearchSpan.setAttribute('data-facets-design', facetsDesignId)
-      }
-      if(facetsPriceAppend){
-        clerkSearchSpan.setAttribute('data-facets-price-append', facetsPriceAppend)
-      }
-      if(facetsPricePrepend){
-        clerkSearchSpan.setAttribute('data-facets-price-prepend', facetsPricePrepend)
-      }
+    if(!loading && Clerk){
+      setDataValues(
+        document,
+        facetsAttributes,
+        facetsAttributeTitles,
+        facetsAttributesMulti,
+        facetsViewMoreText,
+        facetsDesignId,
+        facetsPriceAppend,
+        facetsPricePrepend
+      )
       Clerk('content', `.${adjustedClassName}`)
     } else {
       // TODO: Implement no results message.

@@ -84,7 +84,6 @@ const ClerkIoBlock: StorefrontFunctionComponent<BlockProps> = ({
         Clerk('content', `.${adjustedClassName}`);
       } else {
         Clerk( 'content', `.${adjustedClassName}`, (content: ClerkContentInterfaceObject) => {
-          // Not sure this destructures the key, value pairs
           if(contentParamArgs){
             content.param(contentParamArgs)
           }
