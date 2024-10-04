@@ -140,7 +140,7 @@ export function transformProductToClerk(
 
   const dateString = product.releaseDate ?? new Date()
   // Clerk asks the dates to be a UNIX timestamp (in seconds)
-  // .getTime generates it in miliseconds
+  // .getTime generates it in milliseconds
   const date = Math.floor(new Date(dateString).getTime() / 1000)
 
   const productUrl = rootPath
