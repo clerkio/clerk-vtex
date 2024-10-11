@@ -41,9 +41,9 @@ export const adjustFacetTitles = (
   if(typeof json_titles == 'string'){
     return json_titles
   }
-  
+
   return ''
-  
+
 }
 
 export const createClerkDataProps = ({
@@ -77,7 +77,7 @@ export const createContentParamArgs = (dataProps: DataProps) => {
   for (const [key, value] of Object.entries(dataProps)) {
     const argKey = key.replace('data-', '')
 
-    if (argKey === 'products') {
+    if (argKey === 'products' || argKey === 'category') {
       continue
     }
 

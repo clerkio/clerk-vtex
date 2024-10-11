@@ -57,7 +57,7 @@ export const createContentParamArgs = (dataProps: DataProps) => {
   for (const [key, value] of Object.entries(dataProps)) {
     const argKey = key.replace('data-', '')
 
-    if (argKey === 'products') {
+    if (argKey === 'products' || argKey === 'category') {
       continue
     }
 

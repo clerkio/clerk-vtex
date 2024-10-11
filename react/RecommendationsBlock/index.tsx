@@ -83,7 +83,7 @@ const ClerkIoBlock: StorefrontFunctionComponent<BlockProps> = ({
       if(isEmpty(contentParamArgs)){
         Clerk('content', `.${adjustedClassName}`);
       } else {
-        Clerk( 'content', `.${adjustedClassName}`, (content: ClerkContentInterfaceObject) => {
+        Clerk('content', `.${adjustedClassName}`, (content: ClerkContentInterfaceObject) => {
           if(contentParamArgs){
             content.param(contentParamArgs)
           }
